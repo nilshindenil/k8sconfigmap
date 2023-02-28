@@ -22,4 +22,6 @@ management:
       exposure:
         include:
         - health
-        - info                    
+        - info       
+config:
+  location: /config                     

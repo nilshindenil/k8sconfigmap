@@ -53,6 +53,16 @@ spec:
           valueFrom:
             configMapKeyRef:
               name: guidelinesconfigmap              
-              key: temparatureLevels        
-
-                  
+              key: temparatureLevels
+                
+      volumeMounts:
+        - name: healthinspectorvolume
+          mountPath: /config
+          readonly: true              
+  volumes:
+    - name: healthinspectorvolume
+      configMap:
+        name: healthinspectorconfigmap
+        items:
+          - key: district-healthinspectors.properties
+            path: "district-healthinspectors.properties"                   
