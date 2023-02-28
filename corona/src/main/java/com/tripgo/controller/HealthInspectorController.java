@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-class HealthInspectorController {
+public class HealthInspectorController {
 	@Value("${config.location}")
 	private String configLocation;
 
