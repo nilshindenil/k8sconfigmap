@@ -24,4 +24,4 @@ management:
         - health
         - info       
 config:
-  location: /config                     
+  location: /config/                     
